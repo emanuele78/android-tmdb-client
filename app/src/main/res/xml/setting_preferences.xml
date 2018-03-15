@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/settings">
+
+    <!--<Preference-->
+        <!--android:layout="@layout/layout_divider"/>-->
+
+    <ListPreference
+        android:defaultValue="@string/settings_start_screen_default_value"
+        android:entries="@array/settings_start_screen_entries"
+        android:entryValues="@array/settings_start_screen_values"
+        android:key="@string/settings_start_screen_key"
+        android:title="@string/start_screen_label"/>
+
+    <!--<Preference-->
+        <!--android:layout="@layout/layout_divider"/>-->
+
+    <ListPreference
+        android:defaultValue="@string/settings_content_lang_default"
+        android:entries="@array/settings_content_language_entries"
+        android:entryValues="@array/settings_content_language_values"
+        android:key="@string/settings_content_lang_key"
+        android:title="@string/content_lang_label"/>
+
+    <Preference
+        android:layout="@layout/layout_tmdb_attribution"/>
+</PreferenceScreen>

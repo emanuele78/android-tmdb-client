@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_effect">
+
+    <ImageView
+        android:id="@+id/poster_iv"
+        android:layout_width="@dimen/poster_image_width"
+        android:layout_height="@dimen/poster_image_height"
+        android:contentDescription="@string/poster_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="@dimen/poster_image_width"
+        android:layout_height="@dimen/poster_text_height"
+        android:background="@color/colorGenericPosterInfo"
+        android:contentDescription="@string/image_bar"
+        app:layout_constraintEnd_toEndOf="@+id/poster_iv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/poster_iv"
+        app:layout_constraintTop_toBottomOf="@+id/poster_iv"/>
+
+    <TextView
+        android:id="@+id/year_tv"
+        style="@style/SubTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/poster_text_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/small_margin"
+        android:paddingStart="@dimen/small_margin"
+        app:layout_constraintStart_toStartOf="@+id/background_image"
+        app:layout_constraintTop_toTopOf="@+id/background_image"
+        tools:text="2014"/>
+
+    <TextView
+        android:id="@+id/score_tv"
+        style="@style/SubTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/poster_text_height"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/small_margin"
+        android:paddingRight="@dimen/small_margin"
+        app:layout_constraintEnd_toStartOf="@+id/small_icon_image"
+        app:layout_constraintTop_toTopOf="@+id/background_image"
+        tools:text="312.5"/>
+
+    <ImageView
+        android:id="@+id/small_icon_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/rating_popularity_icon"
+        android:paddingEnd="@dimen/small_margin"
+        android:paddingRight="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/background_image"
+        app:layout_constraintEnd_toEndOf="@+id/background_image"
+        app:layout_constraintTop_toTopOf="@+id/background_image"/>
+
+</android.support.constraint.ConstraintLayout>

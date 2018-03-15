@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">Popular Movies 2</string>
+    <!-- content description strings for navigation drawe -->
+    <string name="drawer_open">Navigation open</string>
+    <string name="drawer_close">Navigation close</string>
+    <!-- error strings -->
+    <string name="server_error">Server error</string>
+    <string name="connection_error">Connection error</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <!-- preference strings -->
+    <string name="settings_start_screen_default_value">@string/settings_start_screen_top_movies_value</string>
+
+    <string name="settings_start_screen_top_movies_entry">Show Top Rated Movies</string>
+    <string name="settings_start_screen_popular_movies_entry">Show Most Popular Movies</string>
+    <string name="settings_start_screen_top_tv_entry">Show Top Rated Tv Shows</string>
+    <string name="settings_start_screen_popular_tv_entry">Show Most Popular Tv Shows</string>
+
+    <string name="settings_start_screen_top_movies_value" translatable="false">top_rated_movies</string>
+    <string name="settings_start_screen_popular_movies_value" translatable="false">popular_movies</string>
+    <string name="settings_start_screen_top_tv_value" translatable="false">top_rated_tv_shows</string>
+    <string name="settings_start_screen_popular_tv_value" translatable="false">popular_tv_shows</string>
+
+    <string name="settings_content_en_lang_entry">English</string>
+    <string name="settings_content_it_lang_entry">Italian</string>
+
+    <string name="settings_content_en_lang_value" translatable="false">en-US</string>
+    <string name="settings_content_it_lang_value" translatable="false">it-IT</string>
+    <string name="image_language" translatable="false">%s,null</string>
+
+    <string name="settings_content_lang_default">@string/settings_content_en_lang_value</string>
+    <string name="settings_content_lang_key">settings_content_lang_key</string>
+    <!-- other strings -->
+    <string name="top_rated_movie_title">Top Rated Movies</string>
+    <string name="top_rated_tv_shows_title">Top Rated Tv Shows</string>
+    <string name="popular_tv_shows_title">Most Popular Tv Shows</string>
+    <string name="popular_movies_title">Most Popular Movies</string>
+
+    <!-- other strings -->
+    <string name="not_available_short">N/A</string>
+    <string name="no_item">No item to show</string>
+    <string name="unable_to_open_movie">Unable to open selected Movie</string>
+    <string name="original_title_label">Original title:</string>
+    <string name="rating_label">Rating</string>
+    <string name="popularity_label">Popularity</string>
+    <string name="release_date">Release date</string>
+    <string name="max_vote_label">/10</string>
+    <string name="plot_label">Plot</string>
+    <string name="votes_label">%d votes</string>
+    <string name="hour_label">h</string>
+    <string name="minute_label">m</string>
+    <string name="budget_value_label">Budget: %s</string>
+    <string name="revenue_value_label">Revenue: %s</string>
+    <string name="budget_standard_currency" translatable="false">$</string>
+    <string name="country_label">Country:</string>
+    <string name="company_label">Production companies:</string>
+    <string name="crew_label">Full technical cast:</string>
+    <string name="cast_label">Full cast:</string>
+    <string name="trailer_label">Trailer:</string>
+    <string name="review_label">Review:</string>
+    <string name="unable_to_open_tvshow">Unable to open selected Tv Show</string>
+    <string name="first_air_date">First Air Date</string>
+    <string name="last_air_date">Last Air Date</string>
+    <string name="number_of_season">Number of season:</string>
+    <string name="number_of_episodes">Number of episodes:</string>
+    <string name="status_label">Status:</string>
+    <string name="author_label">Created by:</string>
+    <string name="date_of_brith">Date of birth:</string>
+    <string name="place_of_birth">Place of birth:</string>
+    <string name="death">Death:</string>
+    <string name="biography_label">Biography:</string>
+    <string name="unable_to_open_person">Unable to open selected Person</string>
+    <string name="age_value">[age %s]</string>
+    <string name="as_actor_in">As actor in:</string>
+    <string name="crew_member_in">As crew member in:</string>
+    <string name="unable_to_open_media">Unable to open selected media</string>
+    <string name="movie_section_label">Movie List</string>
+    <string name="tv_section_label">Tv Show List</string>
+    <string name="show_top_rated_movie">Show Top Rated Movie</string>
+    <string name="show_popular_movie">Show Most Popular Movies</string>
+    <string name="top_rated_tv">Show Top Rated Tv Show</string>
+    <string name="show_popular_tv">Show Most Popular Tv Show</string>
+    <string name="option">Option</string>
+    <string name="settings">Settings</string>
+    <string name="favorites_section_label">My Favorites</string>
+    <string name="show_favorites">Show My Favorite</string>
+    <string name="unable_to_open_trailer">Unable to open selected trailer</string>
+    <string name="unable_to_share_trailer">Unable to share selected Trailer</string>
+    <string name="share_with">Share with</string>
+    <string name="find_similar_movie">Find similar movie</string>
+    <string name="find_similar_tvshow">Find similar Tv Show</string>
+    <string name="people_with_label">People with</string>
+    <string name="movie_with_label">Movie with</string>
+    <string name="tv_show_with_label">Tv Show with</string>
+    <string name="production_company_equals_to">company</string>
+    <string name="release_year_equals_to">release year</string>
+    <string name="rating_greater_than">rating greater than</string>
+    <string name="genre_equals_to">genre</string>
+    <string name="runtime_equals_to">runtime</string>
+    <string name="tv_show_detail_title">Tv Show Details</string>
+    <string name="movie_detail_title">Movie Details</string>
+    <string name="search_result_title">Search results</string>
+    <string name="person_detail_title">Person Detail</string>
+    <string name="movies_similar_to">Movies similar to</string>
+    <string name="tvshows_similar_to">Tv Shows similar to</string>
+    <string name="manual_search_label">manual search</string>
+    <string name="search_view_hint">Insert text to search</string>
+    <string name="result_for_movie_label">Results for Movie:</string>
+    <string name="search_view_title">search</string>
+    <string name="searched_text">Searched text:</string>
+    <string name="unable_to_perform_search">Unable to perform search</string>
+    <string name="unable_to_load_movies">Unable to load movies</string>
+    <string name="result_for_tvshow_label">Results for Tv Show:</string>
+    <string name="result_for_people_label">Result for People:</string>
+    <string name="load_more_label">LOAD MORE</string>
+    <string name="keyword">keyword</string>
+    <string name="add_to_linked_list">Add to linked list</string>
+    <string name="tmdb_logo_content_description">The Movie Database logo</string>
+    <string name="start_screen_label">Start screen</string>
+    <string name="settings_start_screen_key" translatable="false">settings_start_screen_key</string>
+    <string name="content_lang_label">Content launguage</string>
+    <string name="linked_list_key" translatable="false">linked_list_key</string>
+    <string name="person_already_exists">Current person already exists in linked list</string>
+    <string name="people_to_link_label">People to link (%d)</string>
+    <string name="result_for_movie_with_people_label">Result for Movie (%d):</string>
+    <string name="unable_to_link_people">Unable to link selected people</string>
+    <string name="need_more_people">Need at least two people to find links</string>
+    <string name="linked_people_title">Linked People</string>
+    <string name="unable_to_save_as_preferred">Unable to save current item as preferred</string>
+    <string name="favorites_title">My Favorites</string>
+    <string name="error_when_removing_from_db">Error when removing current item from favorites</string>
+    <string name="what_do_u_want_to_do">What do you want to do?</string>
+    <string name="open_details">Open details</string>
+    <string name="remove_item">Remove item</string>
+    <string name="cancel">Cancel</string>
+    <string name="error_while_marking_as_favourite">Error occurs while marking as favourite</string>
+    <string name="upper_bar">Upper bar</string>
+    <string name="big_logo">Big logo</string>
+    <string name="gradient">Gradient</string>
+    <string name="poster_image">Poster image</string>
+    <string name="rating_popularity_icon">Rating popularity icon</string>
+    <string name="image_bar">Image bar</string>
+    <string name="person_pic">Person picture</string>
+    <string name="preferred_item_type_icon">Preferred item type icon</string>
+    <string name="trailer_image">Trailer image</string>
+    <string name="share_icon">Share icon</string>
+    <string name="play_icon">Play icon</string>
+    <string name="expand_icon">Expand icon</string>
+    <string name="empty_image">Empty image</string>
+    <string name="rating_image">Rating image</string>
+    <string name="popularity_image">Popularity image</string>
+    <string name="preferred_image">Preferred image</string>
+    <string name="runtime_icon">Runtime icon</string>
+    <string name="app_logo">App logo</string>
+    <plurals name="genre_label">
+        <item quantity="zero">Genre:</item>
+        <item quantity="one">Genre:</item>
+        <item quantity="other">Genres:</item>
+    </plurals>
+
+</resources>

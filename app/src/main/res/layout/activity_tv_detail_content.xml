@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundApp"
+        android:paddingBottom="@dimen/standard_margin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- BACKGROUND IMAGE SECTION -->
+            <include
+                android:id="@+id/backdrop"
+                layout="@layout/layout_backdrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- INTRO SECTION -->
+            <include
+                android:id="@+id/intro"
+                layout="@layout/layout_intro_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backdrop"/>
+
+            <View
+                android:id="@+id/horizontal_separator_1"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/intro"/>
+
+            <!-- GENRE SECTION -->
+            <TextView
+                android:id="@+id/genre_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_separator_1"
+                tools:text="Genre:"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/genre_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genre_label"/>
+
+            <View
+                android:id="@+id/horizontal_separator_2"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genre_rv"/>
+            <!-- GENERAL INFO SECTION -->
+            <include
+                android:id="@+id/general_info_tv"
+                layout="@layout/layout_general_info_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_2"/>
+
+            <View
+                android:id="@+id/horizontal_separator_3"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/general_info_tv"/>
+            <!-- PLOT SECTION -->
+            <include
+                android:id="@+id/plot"
+                layout="@layout/layout_plot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_3"/>
+
+            <View
+                android:id="@+id/horizontal_separator_4"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/standard_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plot"/>
+            <!-- TECH SECTION -->
+            <include
+                android:id="@+id/tech_info_tv"
+                layout="@layout/layout_technical_info_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_4"/>
+
+            <View
+                android:id="@+id/horizontal_separator_5"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tech_info_tv"/>
+
+            <!-- AUTHORS SECTION -->
+            <TextView
+                android:id="@+id/crew_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/author_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_5" android:layout_marginStart="@dimen/small_margin"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/author_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/crew_label"/>
+
+            <View
+                android:id="@+id/horizontal_separator_6"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/author_rv"/>
+
+            <!-- CAST SECTION -->
+            <TextView
+                android:id="@+id/cast_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/cast_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_6" android:layout_marginStart="@dimen/small_margin"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cast_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cast_label"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>

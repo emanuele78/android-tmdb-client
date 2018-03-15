@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+    <item android:title="@string/movie_section_label">
+        <menu>
+            <item
+                android:id="@+id/top_rated_movie"
+                android:icon="@drawable/ic_movie"
+                android:title="@string/show_top_rated_movie"/>
+            <item
+                android:id="@+id/most_popular_movie"
+                android:icon="@drawable/ic_movie"
+                android:title="@string/show_popular_movie"/>
+        </menu>
+    </item>
+    <item android:title="@string/tv_section_label">
+        <menu>
+            <item
+                android:id="@+id/top_rated_tv"
+                android:icon="@drawable/ic_tv"
+                android:title="@string/top_rated_tv"/>
+            <item
+                android:id="@+id/most_popular_tv"
+                android:icon="@drawable/ic_tv"
+                android:title="@string/show_popular_tv"/>
+        </menu>
+    </item>
+    <item android:title="@string/favorites_section_label">
+        <menu>
+            <item
+                android:id="@+id/favorite_media"
+                android:icon="@drawable/ic_favorites"
+                android:title="@string/show_favorites"/>
+        </menu>
+    </item>
+    <item android:title="@string/option">
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings"/>
+        </menu>
+    </item>
+</menu>

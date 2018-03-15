@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:visible="false"
+        android:id="@+id/search_view"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_view_title"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|always"/>
+    <item
+        android:visible="false"
+        android:id="@+id/action_find_similar_movie"
+        android:orderInCategory="2"
+        android:title="@string/find_similar_movie"
+        app:showAsAction="never"/>
+    <item
+        android:visible="false"
+        android:id="@+id/action_find_similar_tvshow"
+        android:orderInCategory="3"
+        android:title="@string/find_similar_tvshow"
+        app:showAsAction="never"/>
+    <item
+        android:visible="false"
+        android:id="@+id/action_add_to_linked_list"
+        android:orderInCategory="4"
+        android:title="@string/add_to_linked_list"
+        app:showAsAction="never"/>
+    <item
+        android:visible="false"
+        android:id="@+id/action_settings"
+        android:orderInCategory="5"
+        android:title="@string/settings"
+        app:showAsAction="never"/>
+</menu>

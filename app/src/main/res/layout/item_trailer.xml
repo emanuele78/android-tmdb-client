@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/trailer_iv"
+            android:layout_width="@dimen/trailer_image_width"
+            android:layout_height="@dimen/trailer_image_height"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:background="@color/colorGenericPosterInfo"
+            android:contentDescription="@string/trailer_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/trailer_name_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="@+id/trailer_iv"
+            app:layout_constraintEnd_toStartOf="@+id/share_iv"
+            app:layout_constraintStart_toEndOf="@+id/trailer_iv"
+            app:layout_constraintTop_toTopOf="@+id/trailer_iv"
+            tools:text="Trailer name"/>
+
+        <ImageView
+            android:id="@+id/share_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"
+            android:contentDescription="@string/share_icon"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/trailer_name_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/trailer_name_tv"
+            app:srcCompat="@drawable/ic_share"/>
+
+        <ImageView
+            android:id="@+id/play_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/play_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/trailer_iv"
+            app:layout_constraintEnd_toEndOf="@+id/trailer_iv"
+            app:layout_constraintStart_toStartOf="@+id/trailer_iv"
+            app:layout_constraintTop_toTopOf="@+id/trailer_iv"
+            app:srcCompat="@drawable/ic_play_arrow"/>
+
+        <View
+            android:id="@+id/ripple_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/trailer_iv"
+            app:layout_constraintEnd_toEndOf="@+id/trailer_iv"
+            app:layout_constraintStart_toStartOf="@+id/trailer_iv"
+            app:layout_constraintTop_toTopOf="@+id/trailer_iv"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

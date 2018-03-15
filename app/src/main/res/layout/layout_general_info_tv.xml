@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/small_margin"
+        android:paddingTop="@dimen/small_margin">
+
+        <TextView
+            android:id="@+id/rating_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:text="@string/rating_label"
+            app:layout_constraintEnd_toStartOf="@+id/popularity_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/popularity_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/popularity_label"
+            app:layout_constraintEnd_toStartOf="@+id/first_air_date_label"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rating_label"
+            app:layout_constraintTop_toTopOf="@+id/rating_label"/>
+
+        <TextView
+            android:id="@+id/first_air_date_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:gravity="center"
+            android:text="@string/first_air_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/popularity_label"
+            app:layout_constraintTop_toTopOf="@+id/popularity_label"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/rating_image"
+            app:layout_constraintEnd_toEndOf="@+id/rating_label"
+            app:layout_constraintStart_toStartOf="@+id/rating_label"
+            app:layout_constraintTop_toBottomOf="@+id/rating_label"
+            app:srcCompat="@drawable/ic_poster_star_detail"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/SecondaryInfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
+            android:text="@string/max_vote_label"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rating_tv"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/rating_tv"/>
+
+        <TextView
+            android:id="@+id/rating_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:text="8.1"/>
+
+        <TextView
+            android:id="@+id/vote_count_tv"
+            style="@style/SecondaryInfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/rating_tv"
+            app:layout_constraintTop_toBottomOf="@+id/rating_tv"
+            tools:text="45.123 votes"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/popularity_image"
+            app:layout_constraintEnd_toEndOf="@+id/popularity_label"
+            app:layout_constraintStart_toStartOf="@+id/popularity_label"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:srcCompat="@drawable/ic_poster_tap_detail"/>
+
+        <TextView
+            android:id="@+id/popularity_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            tools:text="123.4"/>
+
+        <TextView
+            android:id="@+id/first_air_date_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/first_air_date_label"
+            app:layout_constraintStart_toStartOf="@+id/first_air_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/first_air_date_label"
+            tools:text="12/12/2012"/>
+
+        <TextView
+            android:id="@+id/last_air_date_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/last_air_date"
+            app:layout_constraintEnd_toEndOf="@+id/first_air_date_tv"
+            app:layout_constraintStart_toStartOf="@+id/first_air_date_tv"
+            app:layout_constraintTop_toBottomOf="@+id/first_air_date_tv"/>
+
+        <TextView
+            android:id="@+id/last_air_date_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/last_air_date_label"
+            app:layout_constraintStart_toStartOf="@+id/last_air_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/last_air_date_label"
+            tools:text="TextView"/>
+
+        <View
+            android:id="@+id/rating_ripple_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="ratingClick"
+            app:layout_constraintBottom_toBottomOf="@+id/vote_count_tv"
+            app:layout_constraintEnd_toEndOf="@+id/rating_label"
+            app:layout_constraintStart_toStartOf="@+id/rating_label"
+            app:layout_constraintTop_toTopOf="@+id/rating_label"/>
+
+        <View
+            android:id="@+id/year_ripple_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ripple_effect"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="yearClick"
+            app:layout_constraintBottom_toBottomOf="@+id/last_air_date_tv"
+            app:layout_constraintEnd_toEndOf="@+id/first_air_date_label"
+            app:layout_constraintStart_toStartOf="@+id/first_air_date_label"
+            app:layout_constraintTop_toTopOf="@+id/first_air_date_label"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

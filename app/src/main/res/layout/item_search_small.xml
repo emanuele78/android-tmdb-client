@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/middle_margin"
+    android:foreground="@drawable/ripple_effect">
+
+    <ImageView
+        android:id="@+id/poster_iv"
+        android:layout_width="@dimen/poster_image_width_small"
+        android:layout_height="@dimen/poster_image_height_small"
+        android:contentDescription="@string/poster_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/info_tv"
+        style="@style/SubTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGenericPosterInfo"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/small_margin"
+        android:paddingStart="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="@id/poster_iv"
+        app:layout_constraintStart_toStartOf="@+id/poster_iv"
+        app:layout_constraintTop_toBottomOf="@+id/poster_iv"
+        tools:text="title"/>
+
+</android.support.constraint.ConstraintLayout>

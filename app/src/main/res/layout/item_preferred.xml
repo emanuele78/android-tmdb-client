@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_effect">
+
+    <ImageView
+        android:id="@+id/poster_iv"
+        android:layout_width="@dimen/poster_image_width"
+        android:layout_height="@dimen/poster_image_height"
+        android:contentDescription="@string/poster_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/info_tv"
+        style="@style/SubTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGenericPosterInfo"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:padding="@dimen/small_margin"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/poster_iv"
+        app:layout_constraintTop_toBottomOf="@+id/poster_iv"
+        tools:text="title"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/preferred_icon_w"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/info_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poster_iv"
+        app:srcCompat="@color/colorGenericPosterInfo"/>
+
+    <ImageView
+        android:id="@+id/type_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/preferred_item_type_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/info_tv"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"/>
+</android.support.constraint.ConstraintLayout>

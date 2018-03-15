@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455A64</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#607D8B</color>
+    <color name="colorLabel">#607d8b</color>
+    <color name="colorLabelTransparent">#80607d8b</color>
+    <color name="colorSeparator">#607d8b</color>
+    <color name="colorBackgroundPoster">#212121</color>
+    <color name="colorBackgroundApp">#212121</color>
+    <color name="colorGradientEnd">#00ffffff</color>
+    <color name="colorGenericPosterInfo">#2a2a2a</color>
+    <color name="colorDrawerBackground">#ECEFF1</color>
+    <color name="mainTextColor">#ffffff</color>
+    <color name="subTextColor">#bcbcbc</color>
+    <color name="ratingIconColor">#e6b91e</color>
+</resources>

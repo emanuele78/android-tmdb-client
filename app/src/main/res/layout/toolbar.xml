@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:contentInsetEnd="@dimen/no_margin"
+        app:contentInsetLeft="@dimen/no_margin"
+        app:contentInsetRight="@dimen/no_margin"
+        app:contentInsetStart="@dimen/no_margin"
+        app:popupTheme="@style/ThemeOverlay">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:contentDescription="@string/app_logo"
+                android:onClick="goToHome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/toolbar_title_tv"
+                style="@style/AppTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linked_tv"
+                app:layout_constraintStart_toEndOf="@+id/app_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/linked_tv"
+                style="@style/SubTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginRight="@dimen/small_margin"
+                android:background="@drawable/shape_linked_view"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_person_shape_w"
+                android:drawablePadding="@dimen/middle_margin"
+                android:drawableStart="@drawable/ic_person_shape_w"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect"
+                android:onClick="linkPeople"
+                android:paddingBottom="@dimen/middle_margin"
+                android:paddingLeft="@dimen/small_margin"
+                android:paddingRight="@dimen/small_margin"
+                android:paddingTop="@dimen/middle_margin"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar_title_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toolbar_title_tv"
+                app:layout_constraintVertical_bias="0.545"
+                app:layout_goneMarginRight="@dimen/standard_margin"
+                tools:text="12"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_start_screen_entries">
+        <item>@string/settings_start_screen_top_movies_entry</item>
+        <item>@string/settings_start_screen_popular_movies_entry</item>
+        <item>@string/settings_start_screen_top_tv_entry</item>
+        <item>@string/settings_start_screen_popular_tv_entry</item>
+    </string-array>
+    <string-array name="settings_start_screen_values">
+        <item>@string/settings_start_screen_top_movies_value</item>
+        <item>@string/settings_start_screen_popular_movies_value</item>
+        <item>@string/settings_start_screen_top_tv_value</item>
+        <item>@string/settings_start_screen_popular_tv_value</item>
+    </string-array>
+    <string-array name="settings_content_language_entries">
+        <item>@string/settings_content_it_lang_entry</item>
+        <item>@string/settings_content_en_lang_entry</item>
+    </string-array>
+    <string-array name="settings_content_language_values">
+        <item>@string/settings_content_it_lang_value</item>
+        <item>@string/settings_content_en_lang_value</item>
+    </string-array>
+
+</resources>

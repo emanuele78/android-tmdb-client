@@ -1,0 +1,92 @@
+<resources>
+
+
+
+    <style name="ActivityMainStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorBackgroundApp</item>
+        <item name="android:textColor">@color/colorLabel</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="BigTitleStyle">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+    </style>
+
+    <style name="AppTitleStyle" parent="BigTitleStyle">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="LabelStyle">
+        <item name="android:textColor">@color/colorLabel</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MainLabelStyle" parent="LabelStyle">
+        <item name="android:textColor">@color/mainTextColor</item>
+    </style>
+
+    <style name="PersonNameStyle" parent="LabelStyle">
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RoleNameStyle" parent="LabelStyle">
+        <item name="android:textColor">@color/subTextColor</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SubTitleStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/subTextColor</item>
+    </style>
+
+
+    <style name="HorizontalSeparatorStyle">
+        <item name="android:layout_marginRight">@dimen/small_margin</item>
+        <item name="android:layout_marginLeft">@dimen/small_margin</item>
+        <item name="android:layout_height">@dimen/separator_height</item>
+        <item name="android:background">@color/colorSeparator</item>
+    </style>
+
+    <style name="LengthStyle">
+        <item name="android:textColor">@color/subTextColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="GenreStyle" parent="LengthStyle">
+    </style>
+
+    <style name="InfoStyle" parent="LabelStyle">
+        <item name="android:textColor">@color/mainTextColor</item>
+    </style>
+
+    <style name="SecondaryInfoStyle" parent="LabelStyle">
+        <item name="android:textColor">@color/subTextColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="settings_style" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/colorBackgroundApp</item>
+        <item name="android:textColor">@color/colorLabel</item>
+        <item name="android:textColorSecondary">@color/subTextColor</item>
+        <item name="android:textColorPrimary">@color/mainTextColor</item>
+        <item name="android:alertDialogTheme">@style/dialog_theme</item>
+        <item name="android:textColorAlertDialogListItem">@android:color/holo_green_dark</item>
+    </style>
+
+    <style name="dialog_theme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/colorBackgroundApp</item>
+    </style>
+</resources>

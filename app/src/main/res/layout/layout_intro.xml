@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundApp">
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/BigTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="My Big Favourite Movie Title"/>
+
+        <TextView
+            android:id="@+id/original_title_label"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/original_title_label"
+            app:layout_constraintStart_toStartOf="@+id/title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"/>
+
+        <TextView
+            android:id="@+id/original_title_tv"
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/original_title_label"
+            app:layout_constraintTop_toTopOf="@+id/original_title_label"
+            tools:text="original title"/>
+
+        <ImageView
+            android:id="@+id/preferred_iv"
+            android:layout_width="@dimen/preferred_touch"
+            android:layout_height="@dimen/preferred_touch"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:contentDescription="@string/preferred_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/original_title_tv"
+            app:srcCompat="@drawable/ic_poster_star"/>
+
+        <TextView
+            android:id="@+id/length_tv"
+            style="@style/LengthStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/preferred_touch"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:background="@drawable/shape_text_view"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ripple_effect"
+            android:gravity="center"
+            android:onClick="movieRuntimeClick"
+            android:padding="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/preferred_iv"
+            tools:text="2h 27m"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:contentDescription="@string/runtime_icon"
+            app:layout_constraintStart_toStartOf="@+id/original_title_label"
+            app:layout_constraintTop_toTopOf="@+id/length_tv"
+            app:srcCompat="@drawable/ic_time"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

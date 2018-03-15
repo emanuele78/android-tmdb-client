@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundApp">
+
+        <TextView
+            android:id="@+id/name_tv"
+            style="@style/BigTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="My Big Favourite Actor Name"/>
+
+        <ImageView
+            android:id="@+id/profile_iv"
+            android:layout_width="@dimen/poster_image_width"
+            android:layout_height="@dimen/poster_image_height"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/person_pic"
+            app:layout_constraintStart_toStartOf="@+id/name_tv"
+            app:layout_constraintTop_toBottomOf="@+id/name_tv"
+            app:srcCompat="@drawable/ic_person_shape"/>
+
+        <TextView
+            android:id="@+id/birthday_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:text="@string/date_of_brith"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_iv"
+            app:layout_constraintTop_toTopOf="@+id/profile_iv"/>
+
+        <TextView
+            android:id="@+id/birthday_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/birthday_label"
+            app:layout_constraintStart_toStartOf="@+id/birthday_label"
+            app:layout_constraintTop_toBottomOf="@+id/birthday_label"
+            tools:text="21/11/1978"/>
+
+        <TextView
+            android:id="@+id/age_tv"
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/birthday_tv"
+            app:layout_constraintStart_toStartOf="@+id/birthday_tv"
+            app:layout_constraintTop_toBottomOf="@+id/birthday_tv"
+            tools:text="[età 40]"/>
+
+        <TextView
+            android:id="@+id/place_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/place_of_birth"
+            app:layout_constraintEnd_toEndOf="@+id/age_tv"
+            app:layout_constraintStart_toStartOf="@+id/age_tv"
+            app:layout_constraintTop_toBottomOf="@+id/age_tv"/>
+
+        <TextView
+            android:id="@+id/place_tv"
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/place_label"
+            app:layout_constraintStart_toStartOf="@+id/place_label"
+            app:layout_constraintTop_toBottomOf="@+id/place_label"
+            tools:text="TextView"/>
+
+        <TextView
+            android:id="@+id/death_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/death"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/place_tv"
+            app:layout_constraintStart_toStartOf="@+id/place_tv"
+            app:layout_constraintTop_toBottomOf="@+id/place_tv"/>
+
+        <TextView
+            android:id="@+id/death_tv"
+            style="@style/SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/death_label"
+            app:layout_constraintStart_toStartOf="@+id/death_label"
+            app:layout_constraintTop_toBottomOf="@+id/death_label"
+            tools:text="TextView"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

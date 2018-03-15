@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/season_label"
+            style="@style/LabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/number_of_season"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/episodes_label"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/number_of_episodes"
+            app:layout_constraintStart_toStartOf="@+id/season_label"
+            app:layout_constraintTop_toBottomOf="@+id/season_label"/>
+
+        <TextView
+            android:id="@+id/country_label"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:text="@string/country_label"
+            app:layout_constraintEnd_toStartOf="@+id/country_tv"
+            app:layout_constraintTop_toTopOf="@+id/season_label"/>
+
+        <TextView
+            android:id="@+id/country_tv"
+            style="@style/InfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="US, IT"/>
+
+        <TextView
+            android:id="@+id/production_label"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/company_label"
+            app:layout_constraintStart_toStartOf="@+id/episodes_label"
+            app:layout_constraintTop_toBottomOf="@+id/status_label"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/companies_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/production_label"
+            app:layout_constraintTop_toBottomOf="@+id/production_label"/>
+
+        <TextView
+            android:id="@+id/season_tv"
+            style="@style/InfoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintBaseline_toBaselineOf="@+id/season_label"
+            app:layout_constraintEnd_toStartOf="@+id/country_label"
+            app:layout_constraintStart_toEndOf="@+id/season_label"
+            tools:text="123,000"/>
+
+        <TextView
+            android:id="@+id/episodes_tv"
+            style="@style/InfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintBaseline_toBaselineOf="@+id/episodes_label"
+            app:layout_constraintStart_toEndOf="@+id/episodes_label"
+            tools:text="123,000"/>
+
+        <TextView
+            android:id="@+id/status_label"
+            style="@style/LabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/status_label"
+            app:layout_constraintStart_toStartOf="@+id/episodes_label"
+            app:layout_constraintTop_toBottomOf="@+id/episodes_label"/>
+
+        <TextView
+            android:id="@+id/status_tv"
+            style="@style/InfoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintBaseline_toBaselineOf="@+id/status_label"
+            app:layout_constraintStart_toEndOf="@+id/status_label"
+            tools:text="TextView"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

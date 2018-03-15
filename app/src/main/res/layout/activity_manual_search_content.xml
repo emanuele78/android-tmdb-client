@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundApp"
+        android:paddingBottom="@dimen/standard_margin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- user text -->
+            <ImageView
+                android:id="@+id/upper_bar_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/upper_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/user_text_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/label_tv"
+                style="@style/SubTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/searched_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/user_text_tv"
+                style="@style/MainLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/small_margin"
+                app:layout_constraintBaseline_toBaselineOf="@+id/label_tv"
+                app:layout_constraintEnd_toEndOf="@+id/upper_bar_image"
+                app:layout_constraintStart_toEndOf="@+id/label_tv"
+                tools:text="Top Rated Movies "/>
+
+            <!-- MOVIE SECTION -->
+            <TextView
+                android:id="@+id/movie_result_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:text="@string/result_for_movie_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_text_tv"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/movie_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_result_label"/>
+
+            <ProgressBar
+                android:id="@+id/movie_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_rv"
+                app:layout_constraintEnd_toEndOf="@+id/movie_rv"
+                app:layout_constraintStart_toStartOf="@+id/movie_rv"
+                app:layout_constraintTop_toTopOf="@+id/movie_rv"/>
+
+            <View
+                android:id="@+id/horizontal_separator_1"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movie_rv"/>
+
+            <!-- TVSHOW SECTION -->
+            <TextView
+                android:id="@+id/tvshow_result_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:text="@string/result_for_tvshow_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_separator_1"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tvshow_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvshow_result_label"/>
+
+            <ProgressBar
+                android:id="@+id/tvshow_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/tvshow_rv"
+                app:layout_constraintEnd_toEndOf="@+id/tvshow_rv"
+                app:layout_constraintStart_toStartOf="@+id/tvshow_rv"
+                app:layout_constraintTop_toTopOf="@+id/tvshow_rv"/>
+
+            <View
+                android:id="@+id/horizontal_separator_2"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvshow_rv"/>
+
+            <!-- PEOPLE SECTION -->
+            <TextView
+                android:id="@+id/people_result_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:text="@string/result_for_people_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_separator_2"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/people_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/people_result_label"/>
+
+            <ProgressBar
+                android:id="@+id/people_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/people_rv"
+                app:layout_constraintEnd_toEndOf="@+id/people_rv"
+                app:layout_constraintStart_toStartOf="@+id/people_rv"
+                app:layout_constraintTop_toTopOf="@+id/people_rv"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>

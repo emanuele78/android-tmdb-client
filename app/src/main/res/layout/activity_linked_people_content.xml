@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundApp"
+        android:paddingBottom="@dimen/standard_margin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- UPPER BAR SECTION -->
+            <ImageView
+                android:id="@+id/upper_bar_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/upper_bar"
+                app:layout_constraintBottom_toBottomOf="@id/label_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/label_tv"
+                style="@style/SubTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                android:paddingBottom="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="@+id/upper_bar_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="People to link (2)"/>
+
+
+            <!-- PEOPLE TO LINK SECTION -->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/people_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_tv"/>
+
+            <View
+                android:id="@+id/horizontal_separator_0"
+                style="@style/HorizontalSeparatorStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/people_rv"/>
+
+
+            <!-- MOVIE SECTION -->
+            <TextView
+                android:id="@+id/movie_result_label"
+                style="@style/LabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_separator_0"
+                tools:layout_editor_absoluteY="45dp"
+                tools:text="Result for Movie (12)"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/movie_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_result_label"/>
+
+            <ProgressBar
+                android:id="@+id/movie_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_rv"
+                app:layout_constraintEnd_toEndOf="@+id/movie_rv"
+                app:layout_constraintStart_toStartOf="@+id/movie_rv"
+                app:layout_constraintTop_toTopOf="@+id/movie_rv"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>

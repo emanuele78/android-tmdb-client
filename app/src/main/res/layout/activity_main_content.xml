@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundApp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/standard_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upper_bar_image"/>
+
+        <ImageView
+            android:id="@+id/upper_bar_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mode_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorPrimary"
+            android:contentDescription="@string/upper_bar"/>
+
+        <TextView
+            android:id="@+id/mode_tv"
+            style="@style/MainLabelStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/small_margin"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_tv"
+            app:layout_constraintEnd_toStartOf="@+id/item_count_tv"
+            app:layout_constraintStart_toEndOf="@+id/label_tv"
+            tools:text="Top Rated Movies "/>
+
+        <TextView
+            android:id="@+id/item_count_tv"
+            style="@style/MainLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mode_tv"
+            app:layout_constraintEnd_toEndOf="@+id/upper_bar_image"
+            tools:text="4599/4599"/>
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/layout_empty_view"
+            android:layout_width="@dimen/no_margin"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mode_tv"/>
+
+
+        <TextView
+            android:id="@+id/label_tv"
+            style="@style/SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Label"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

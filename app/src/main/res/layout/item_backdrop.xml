@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backdrop_iv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/backdrop_viewpager_height"
+            android:background="@color/colorLabelTransparent"
+            android:contentDescription="@string/big_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_video_camera"/>
+
+        <ImageView
+            android:id="@+id/gradient_iv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/backdrop_gradient_height"
+            android:contentDescription="@string/gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/backdrop_iv"
+            app:layout_constraintEnd_toEndOf="@+id/backdrop_iv"
+            app:layout_constraintStart_toStartOf="@+id/backdrop_iv"
+            app:srcCompat="@drawable/gradient_shape"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
